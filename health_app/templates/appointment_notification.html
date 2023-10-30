@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Request</title>
+</head>
+<body>
+    <h1>Appointment Request</h1>
+    <p>Hello {{ appointment.health_worker.email }},</p>
+    <p>You have received an appointment request from {{ appointment.user.email }}.</p>
+    <p>Date: {{ appointment.date }}</p>
+    <p>Please log in to your account to accept or reject the appointment.</p>
+    <p>Thank you!</p>
+</body>
+</html>

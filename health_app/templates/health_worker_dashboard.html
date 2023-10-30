@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Health Worker Dashboard</h2>
+  <p>Total Appointments Booked this Month: {{ appointments_booked }}</p>
+  <p>Total Appointments Rejected this Month: {{ appointments_rejected }}</p>
+  <ul>
+    {% for appointment in appointments %}
+      <li>
+        <p>Patient: {{ appointment.patient }}</p>
+        <p>Date and Time: {{ appointment.date_and_time }}</p>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Submit Decision">
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

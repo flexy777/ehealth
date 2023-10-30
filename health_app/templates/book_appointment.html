@@ -1,0 +1,13 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Book Appointment with {{ health_worker.email }}</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-dark mb-3" type="submit">Book Appointment</button>
+  </form>
+  <a href="{% url 'search_health_workers' %}">Back to Health Workers</a>
+</div>
+{% endblock %}

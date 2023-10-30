@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Search Health Workers</h1>
+  <ul>
+    {% for health_worker in health_workers %}
+      <li>
+        {{ health_worker.email }}
+        <a href="{% url 'book_appointment' health_worker.id %}">Book Appointment</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

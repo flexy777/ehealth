@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+<h1>Statistical Details</h1>
+<img src="{% static 'chart.png' %}" alt="Blood Group Chart">
+<p>
+    <img src="{% static 'genotype.png' %}" alt="Genotype Chart">
+</p>
+<!-- Add other statistical details here -->
+{% endblock %}
